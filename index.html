@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h2>Set User Email and Calendar ID</h2>
+    <form>
+      User Email: <input type="text" id="userEmail"><br>
+      Calendar ID: <input type="text" id="calendarId"><br>
+      <input type="button" value="Set Values" onclick="setValues()">
+    </form>
+
+    <script>
+      function setValues() {
+        var userEmail = document.getElementById('userEmail').value;
+        var calendarId = document.getElementById('calendarId').value;
+        google.script.run.setUserEmailAndCalendarId(userEmail, calendarId);
+      }
+    </script>
+  </body>
+</html>
